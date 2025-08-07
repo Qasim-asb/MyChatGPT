@@ -1,0 +1,15 @@
+.themeBtn {
+  background-color: var(--btn-background-color);
+  color: var(--btn-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.themeBtn:hover {
+  background-color: var(--hover-btn-background-color);
+  transform: rotate(10deg);
+}

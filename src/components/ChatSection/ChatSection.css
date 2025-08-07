@@ -1,0 +1,125 @@
+.chatsection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-m);
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--chat-bg);
+  color: var(--color);
+}
+
+.topsection {
+  height: 90%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.headings {
+  font-size: var(--step-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7em;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.box {
+  display: flex;
+  padding: var(--space-2xs);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.box img {
+  align-self: start;
+  object-fit: cover;
+}
+
+.box p {
+  font-size: var(--step--1);
+  align-self: center;
+}
+
+.loader {
+  display: flex;
+  gap: var(--space-3xs);
+  align-items: center;
+}
+
+.loader hr {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: var(--color);
+  border: none;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.loader hr:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.loader hr:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.bottomsection {
+  align-self: center;
+  margin-top: auto;
+  display: flex;
+  position: relative;
+  width: min(100%, 40rem);
+}
+
+.bottomsection input {
+  font-size: var(--step--1);
+  width: 100%;
+  padding: 0.8em 3em 0.8em 1.2em;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--input-bg);
+  color: var(--color);
+  outline: none;
+}
+
+.bottomsection input:focus {
+  box-shadow: 0 0 0 2px var(--hover-btn-background-color);
+}
+
+#sendbtn {
+  position: absolute;
+  right: min(1rem, 5%);
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: var(--color);
+}
+
+#sendbtn:hover {
+  color: var(--hover-btn-background-color);
+}
